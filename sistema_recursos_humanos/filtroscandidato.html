@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/filtro.css" >
+    <title>Filtros de candidatos</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-end mt-3">
+        <a href="recursoshumanos.html" onclick="goBack()" class="btn btn-primary">Volver</a>
+      </div>
+    <script>
+        function applyFilter() {
+    var skillFilter = document.getElementById("skillFilter").value;
+    var experienceFilter = document.getElementById("experienceFilter").value;
+
+    var profiles = document.getElementsByClassName("candidate-profile");
+    var progressBars = document.getElementsByClassName("progress-bar    ");
+
+    for (var i = 0; i < profiles.length; i++) {
+        var displayProfile = true;
+
+        if (skillFilter !== "" && !profiles[i].textContent.includes(skillFilter)) {
+            displayProfile = false;
+        }
+
+        if (experienceFilter !== "" && !profiles[i].textContent.includes(experienceFilter)) {
+            displayProfile = false;
+        }
+
+        if (displayProfile) {
+            profiles[i].style.display = "block";
+            progressBars[i].style.display = "block"; // Mostrar la barra de progreso correspondiente
+        } else {
+            profiles[i].style.display = "none";
+            progressBars[i].style.display = "none"; // Ocultar la barra de progreso correspondiente
+        }
+    }
+}
+
+    </script>
+    <div>
+        <label for="skillFilter">Habilidad:</label>
+        <input type="text" id="skillFilter">
+    </div>
+    <div>
+        <label for="experienceFilter">Experiencia:</label>
+        <input type="text" id="experienceFilter">
+    </div>
+    <button onclick="applyFilter()">Aplicar Filtro</button>
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 80%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Front-End Senior</h1>
+        <p>Habilidades Técnicas: HTML, CSS, JavaScript, React.</p>
+        <p>Experiencia Laboral: Más de 5 años en desarrollo Front-End.</p>
+    </div>
+
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 75%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Back-End Senior</h1>
+        <p>Habilidades Técnicas: Node.js, MongoDB, REST API, SQL Databases.</p>
+        <p>Experiencia Laboral: Más de 7 años en desarrollo Back-End.</p>
+    </div>
+   
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 50%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Front-End Senior</h1>
+        <p>Habilidades Técnicas: HTML, CSS, JavaScript, Angular.</p>
+        <p>Experiencia Laboral: Más de 4 años en desarrollo Front-End.</p>
+    </div>
+
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 25%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Back-End Senior</h1>
+        <p>Habilidades Técnicas: Node.js, MongoDB, WebSocket.</p>
+        <p>Experiencia Laboral: Más de 3 años en desarrollo Back-End.</p>
+    </div>
+ 
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 15%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Front-End Senior</h1>
+        <p>Habilidades Técnicas: HTML, CSS, JavaScript, React.</p>
+        <p>Experiencia Laboral: Más de 2 años en desarrollo Front-End.</p>
+    </div>
+   
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 100%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Back-End Senior</h1>
+        <p>Habilidades Técnicas: Node.js, MongoDB, REST API,Microservicios,WebSocket.</p>
+        <p>Experiencia Laboral: Más de 10 años en desarrollo Back-End.</p>
+    </div>
+
+    <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar" style="width: 1%"></div>
+      </div>
+    <div class="candidate-profile">
+        <h1>Desarrollador Front-End Senior</h1>
+        <p>Habilidades Técnicas: HTML, CSS, JavaScript, React.</p>
+        <p>Experiencia Laboral:0 años.</p>
+    </div>
+    
+
+    
+
+</body>
+</html>
+
+</body>
+</html>

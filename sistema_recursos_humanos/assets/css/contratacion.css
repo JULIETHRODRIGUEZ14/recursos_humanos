@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: burlywood;
+    background-image: url('../img/Contratando-candidato.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+    margin-top: 0;
+    
+}
+

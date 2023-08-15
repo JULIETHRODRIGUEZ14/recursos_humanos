@@ -1,0 +1,38 @@
+body{
+    background-color: burlywood;
+}
+h1{
+    text-align: center;
+    margin-top: 0;
+}
+.imagen{
+    display: block;
+    margin: 0 auto;
+}
+.descripcion{
+    text-align: center;
+}
+.requisitos{
+    padding: 30px;
+}
+.habilidades{
+    padding: 30px;
+}
+.cultura{
+    padding: 30px;
+}
+.salario{
+    padding: 30px;
+}
+.aplicar{
+    padding: 30px;
+}
+.fecha{
+    padding: 30px;
+}
+.contacto{
+    text-align: center;
+}
+.ubicacion{
+    text-align: center;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/entrevista.css" >
+    <script src="https://kit.fontawesome.com/3de83de5c9.js" crossorigin="anonymous"></script>
+    <title>Prueba de Candidatos</title>
+    
+</head>
+<body>
+    <div class="d-flex justify-content-end mt-3">
+        <a href="recursoshumanos.html" onclick="goBack()" class="btn btn-primary">Volver</a>
+      </div>
+    <div class="candidate-test">
+        <h1>Prueba de Desarrollo Front-End</h1>
+        <p>Por favor, responde la siguiente pregunta:</p>
+        <form>
+        <p>1.¿Cuál de los siguientes lenguajes es utilizado para diseñar la estructura de una página web?</p>
+            <input type="radio" name="respuesta" value="html"> HTML<br>
+            <input type="radio" name="respuesta" value="css"> CSS<br>
+            <input type="radio" name="respuesta" value="javascript"> JavaScript<br>
+            <input type="radio" name="respuesta" value="python"> Python<br>
+            <br>
+        <p>2. ¿Qué lenguaje se utiliza para dar estilo a una página web?</p>
+            <input type="radio" name="respuesta2" value="html"> HTML<br>
+            <input type="radio" name="respuesta2" value="css"> CSS<br>
+            <input type="radio" name="respuesta2" value="javascript"> JavaScript<br>
+            <input type="radio" name="respuesta2" value="python"> Python<br>
+            <br>
+
+          <p>3. ¿Cuál de las siguientes opciones es una librería de JavaScript ampliamente utilizada?</p>
+            <input type="radio" name="respuesta3" value="html"> HTML<br>
+            <input type="radio" name="respuesta3" value="jquery"> jQuery<br>
+            <input type="radio" name="respuesta3" value="css"> CSS<br>
+            <input type="radio" name="respuesta3" value="python"> Python<br>
+            <br>
+          <p>4. ¿Cuál de los siguientes no es un framework de JavaScript?</p>
+            <input type="radio" name="respuesta4" value="vue"> Vue.js<br>
+            <input type="radio" name="respuesta4" value="react"> React<br>
+            <input type="radio" name="respuesta4" value="django"> Django<br>
+            <input type="radio" name="respuesta4" value="angular"> Angular<br>
+            <br>
+          <p>5. ¿Qué propiedad de CSS se utiliza para controlar el espaciado interno de un elemento?</p>
+            <input type="radio" name="respuesta5" value="margin"> Margin<br>
+            <input type="radio" name="respuesta5" value="padding"> Padding<br>
+            <input type="radio" name="respuesta5" value="border"> Border<br>
+            <input type="radio" name="respuesta5" value="width"> Width<br>
+            <br>
+          <p>6. ¿Cuál es el estándar de diseño responsivo recomendado por Google?</p>
+            <input type="radio" name="respuesta6" value="responsive"> Diseño Adaptativo<br>
+            <input type="radio" name="respuesta6" value="mobile"> Sitio Web Móvil<br>
+            <input type="radio" name="respuesta6" value="flexbox"> Flexbox<br>
+            <input type="radio" name="respuesta6" value="material"> Material Design<br>
+            <br>
+          <p>7. ¿Cuál de las siguientes etiquetas HTML se utiliza para crear un enlace?</p>
+            <input type="radio" name="respuesta7" value="link"> &lt;link&gt;<br>
+            <input type="radio" name="respuesta7" value="a"> &lt;a&gt;<br>
+            <input type="radio" name="respuesta7" value="img"> &lt;img&gt;<br>
+            <input type="radio" name="respuesta7" value="p"> &lt;p&gt;<br>
+            <br>
+            
+          <p>8. ¿Qué propiedad de CSS se utiliza para cambiar el color de fondo de un elemento?</p>
+            <input type="radio" name="respuesta8" value="color"> color<br>
+            <input type="radio" name="respuesta8" value="background-color"> background-color<br>
+            <input type="radio" name="respuesta8" value="font-size"> font-size<br>
+            <input type="radio" name="respuesta8" value="text-align"> text-align<br>
+            <br>
+            
+          <p>9. ¿Cuál de las siguientes afirmaciones sobre AJAX es cierta?</p>
+            <input type="radio" name="respuesta9" value="ajax"> AJAX es una técnica para actualizar partes de una página web sin recargarla completamente.<br>
+            <input type="radio" name="respuesta9" value="ajax"> AJAX es un lenguaje de programación utilizado para crear animaciones en sitios web.<br>
+            <input type="radio" name="respuesta9" value="ajax"> AJAX es un framework de diseño para el desarrollo web front-end.<br>
+            <input type="radio" name="respuesta9" value="ajax"> AJAX se utiliza para crear bases de datos en línea.<br>
+            <br>
+            <input id="submitButton" type="submit" value="Enviar Respuesta">
+            </form>
+          
+    </div>
+    
+    
+    <div id="confirmationMessage" style="display: none;">
+        Respuestas enviadas exitosamente.
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+          const form = document.querySelector("form");
+          const confirmationMessage = document.getElementById("confirmationMessage");
+          const submitButton = document.getElementById("submitButton"); 
+  
+          form.addEventListener("submit", function(event) {
+              event.preventDefault(); // Evita el envío real del formulario
+  
+              // Aquí puedes agregar la lógica para guardar las respuestas o realizar cualquier otra acción necesaria
+  
+              // Muestra una ventana emergente con el mensaje de éxito
+              alert("¡Respuesta enviada exitosamente!");
+              
+          });
+      });
+  </script>
+
+  
+
+</body>
+</html>
